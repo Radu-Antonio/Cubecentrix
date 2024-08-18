@@ -1,0 +1,103 @@
+.titlu {
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin: 15px auto;
+    max-width: 600px;
+}
+
+.titlu h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #040316;
+}
+
+article {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+article h1 {
+    font-size: 2.5em; 
+    text-align: center;
+    margin: 30px 0; 
+}
+
+article h2 {
+    font-size: 2em; 
+    text-align: center;
+    margin: 20px 0; 
+}
+
+article p {
+    font-size: 1.2em; 
+    text-align: center;
+    margin: 20px 0; 
+}
+
+article img {
+    display: block;
+    max-width: 40vw; 
+    height: auto;
+    margin: 30px auto; 
+}
+
+article #rot {
+    max-width: 50vw; 
+}
+
+section {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+section h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    display: inline-block; 
+    vertical-align: middle;
+}
+
+section h1 + img {
+    width: 8%; 
+    margin-left: 20px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+section p {
+    margin: 20px auto;
+    line-height: 1.6;
+    font-size: 1.2em;
+    max-width: 700px;
+    text-align: center;
+    color: #333;
+}
+
+section hr {
+    margin: 20px auto;
+    border: none;
+    border-top: 2px solid #e98a0d;
+    width: 50%;
+}
+
+section img {
+    width: 15%; /* Adjust the size of all images relatively */
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.image-container img {
+    margin: 20px;
+    width: 15%; /* Adjusts image size relative to container */
+    height: auto;
+}

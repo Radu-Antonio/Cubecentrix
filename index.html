@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubecentrix</title>
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./learn.html">LEARN</a></li>
+            <li><a href="./algorithms.html">ALGORITHMS</a></li>
+            <li><a href="./solver.html">SOLVER</a></li>
+            <li><a href="./timer.html">TIMER</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="howtosolve">
+            <h1>Can You Solve a Rubik’s Cube?</h1>
+            <button id="learn">Start here</button>
+        </section>
+        <hr>
+        <section id="cards">
+            <article>
+                <h1>Time yourself</h1>
+                <button id="train">Click here</button>
+            </article>
+            <article>
+                <h1><a href="./algorithms.html">OLL Trainer</a></h1>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xlink="http://www.w3.org/1999/xlink"
+                    svgjs="http://svgjs.dev/svgjs" width="75" height="75">
+                    <rect width="58.33333333333333" height="58.33333333333333" x="8.333333333333334"
+                        y="8.333333333333334" fill="#000000"></rect>
+                    <rect width="13.125" height="13.125" x="9.305555555555555" y="9.305555555555555" rx="0" ry="0"
+                        fill="#888888"></rect>
+                    <rect width="13.125" height="13.125" x="9.305555555555555" y="13.680555555555555" rx="0" ry="0"
+                        fill="#888888"></rect>
+                    <rect width="13.125" height="13.125" x="13.680555555555555" y="9.305555555555555" rx="0" ry="0"
+                        fill="#888888"></rect>
+                    <rect width="13.125" height="13.125" x="13.680555555555555" y="13.680555555555555" rx="1" ry="1"
+                        fill="#888888"></rect>
+                    <rect width="13.125" height="13.125" x="9.305555555555555" y="28.75" rx="0" ry="0" fill="#ffff00">
+                    </rect>
+                    <rect width="13.125" height="13.125" x="9.305555555555555" y="33.125" rx="0" ry="0" fill="#ffff00">
+                    </rect>
+                    <rect width="13.125" height="13.125" x="13.680555555555555" y="28.75" rx="4.375" ry="4.375"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="13.680555555555555" y="33.125" rx="4.375" ry="4.375"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="9.305555555555555" y="48.19444444444444" rx="0" ry="0"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="9.305555555555555" y="52.56944444444444" rx="0" ry="0"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="13.680555555555555" y="48.19444444444444" rx="4.375"
+                        ry="4.375" fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="13.680555555555555" y="52.56944444444444" rx="0" ry="0"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="28.75" y="9.305555555555555" rx="0" ry="0" fill="#888888">
+                    </rect>
+                    <rect width="13.125" height="13.125" x="28.75" y="13.680555555555555" rx="4.375" ry="4.375"
+                        fill="#888888"></rect>
+                    <rect width="13.125" height="13.125" x="33.125" y="9.305555555555555" rx="0" ry="0" fill="#888888">
+                    </rect>
+                    <rect width="13.125" height="13.125" x="33.125" y="13.680555555555555" rx="4.375" ry="4.375"
+                        fill="#888888"></rect>
+                    <rect width="13.125" height="13.125" x="28.75" y="28.75" rx="4.375" ry="4.375" fill="#ffff00">
+                    </rect>
+                    <rect width="13.125" height="13.125" x="28.75" y="33.125" rx="4.375" ry="4.375" fill="#ffff00">
+                    </rect>
+                    <rect width="13.125" height="13.125" x="33.125" y="28.75" rx="4.375" ry="4.375" fill="#ffff00">
+                    </rect>
+                    <rect width="13.125" height="13.125" x="33.125" y="33.125" rx="4.375" ry="4.375" fill="#ffff00">
+                    </rect>
+                    <rect width="13.125" height="13.125" x="28.75" y="48.19444444444444" rx="4.375" ry="4.375"
+                        fill="#888888"></rect>
+                    <rect width="13.125" height="13.125" x="28.75" y="52.56944444444444" rx="0" ry="0" fill="#888888">
+                    </rect>
+                    <rect width="13.125" height="13.125" x="33.125" y="48.19444444444444" rx="4.375" ry="4.375"
+                        fill="#888888"></rect>
+                    <rect width="13.125" height="13.125" x="33.125" y="52.56944444444444" rx="0" ry="0" fill="#888888">
+                    </rect>
+                    <rect width="13.125" height="13.125" x="48.19444444444444" y="9.305555555555555" rx="0" ry="0"
+                        fill="#888888"></rect>
+                    <rect width="13.125" height="13.125" x="48.19444444444444" y="13.680555555555555" rx="1" ry="1"
+                        fill="#888888"></rect>
+                    <rect width="13.125" height="13.125" x="52.56944444444444" y="9.305555555555555" rx="1" ry="1"
+                        fill="#888888"></rect>
+                    <rect width="13.125" height="13.125" x="52.56944444444444" y="13.680555555555555" rx="0" ry="0"
+                        fill="#888888"></rect>
+                    <rect width="13.125" height="13.125" x="48.19444444444444" y="28.75" rx="4.375" ry="4.375"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="48.19444444444444" y="33.125" rx="4.375" ry="4.375"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="52.56944444444444" y="28.75" rx="1" ry="1" fill="#ffff00">
+                    </rect>
+                    <rect width="13.125" height="13.125" x="52.56944444444444" y="33.125" rx="0" ry="0" fill="#ffff00">
+                    </rect>
+                    <rect width="13.125" height="13.125" x="48.19444444444444" y="48.19444444444444" rx="1" ry="1"
+                        fill="#888888"></rect>
+                    <rect width="13.125" height="13.125" x="48.19444444444444" y="52.56944444444444" rx="0" ry="0"
+                        fill="#888888"></rect>
+                    <rect width="13.125" height="13.125" x="52.56944444444444" y="48.19444444444444" rx="1" ry="1"
+                        fill="#888888"></rect>
+                    <rect width="13.125" height="13.125" x="52.56944444444444" y="52.56944444444444" rx="0" ry="0"
+                        fill="#888888"></rect>
+                    <rect width="58.33333333333333" height="8.333333333333334" x="8.333333333333334" y="0"
+                        fill="#000000"></rect>
+                    <rect width="58.33333333333333" height="8.333333333333334" x="8.333333333333334"
+                        y="66.66666666666666" fill="#000000"></rect>
+                    <rect width="8.333333333333334" height="58.33333333333333" x="0" y="8.333333333333334"
+                        fill="#000000"></rect>
+                    <rect width="8.333333333333334" height="58.33333333333333" x="66.66666666666666"
+                        y="8.333333333333334" fill="#000000"></rect>
+                    <rect width="17.5" height="6.388888888888889" x="9.305555555555555" y="0.9722222222222221" rx="1"
+                        ry="1" fill="#ffff00"></rect>
+                    <rect width="17.5" height="6.388888888888889" x="9.305555555555555" y="67.63888888888889" rx="1"
+                        ry="1" fill="#888888"></rect>
+                    <rect width="6.388888888888889" height="17.5" x="0.9722222222222221" y="9.305555555555555" rx="1"
+                        ry="1" fill="#888888"></rect>
+                    <rect width="6.388888888888889" height="17.5" x="67.63888888888889" y="9.305555555555555" rx="1"
+                        ry="1" fill="#ffff00"></rect>
+                    <rect width="17.5" height="6.388888888888889" x="28.75" y="0.9722222222222221" rx="1" ry="1"
+                        fill="#ffff00"></rect>
+                    <rect width="17.5" height="6.388888888888889" x="28.75" y="67.63888888888889" rx="1" ry="1"
+                        fill="#ffff00"></rect>
+                    <rect width="6.388888888888889" height="17.5" x="0.9722222222222221" y="28.75" rx="1" ry="1"
+                        fill="#888888"></rect>
+                    <rect width="6.388888888888889" height="17.5" x="67.63888888888889" y="28.75" rx="1" ry="1"
+                        fill="#888888"></rect>
+                    <rect width="17.5" height="6.388888888888889" x="48.19444444444444" y="0.9722222222222221" rx="1"
+                        ry="1" fill="#888888"></rect>
+                    <rect width="17.5" height="6.388888888888889" x="48.19444444444444" y="67.63888888888889" rx="1"
+                        ry="1" fill="#ffff00"></rect>
+                    <rect width="6.388888888888889" height="17.5" x="0.9722222222222221" y="48.19444444444444" rx="1"
+                        ry="1" fill="#888888"></rect>
+                    <rect width="6.388888888888889" height="17.5" x="67.63888888888889" y="48.19444444444444" rx="1"
+                        ry="1" fill="#888888"></rect>
+                </svg>
+            </article>
+            <article>
+                <h1><a href="./algorithms.html">PLL Trainer</a></h1>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xlink="http://www.w3.org/1999/xlink"
+                    svgjs="http://svgjs.dev/svgjs" width="75" height="75">
+                    <rect width="58.33333333333333" height="58.33333333333333" x="8.333333333333334"
+                        y="8.333333333333334" fill="#000000"></rect>
+                    <rect width="13.125" height="13.125" x="9.305555555555555" y="9.305555555555555" rx="0" ry="0"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="9.305555555555555" y="13.680555555555555" rx="0" ry="0"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="13.680555555555555" y="9.305555555555555" rx="0" ry="0"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="13.680555555555555" y="13.680555555555555" rx="1" ry="1"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="9.305555555555555" y="28.75" rx="0" ry="0" fill="#ffff00">
+                    </rect>
+                    <rect width="13.125" height="13.125" x="9.305555555555555" y="33.125" rx="0" ry="0" fill="#ffff00">
+                    </rect>
+                    <rect width="13.125" height="13.125" x="13.680555555555555" y="28.75" rx="4.375" ry="4.375"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="13.680555555555555" y="33.125" rx="4.375" ry="4.375"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="9.305555555555555" y="48.19444444444444" rx="0" ry="0"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="9.305555555555555" y="52.56944444444444" rx="0" ry="0"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="13.680555555555555" y="48.19444444444444" rx="4.375"
+                        ry="4.375" fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="13.680555555555555" y="52.56944444444444" rx="0" ry="0"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="28.75" y="9.305555555555555" rx="0" ry="0" fill="#ffff00">
+                    </rect>
+                    <rect width="13.125" height="13.125" x="28.75" y="13.680555555555555" rx="4.375" ry="4.375"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="33.125" y="9.305555555555555" rx="0" ry="0" fill="#ffff00">
+                    </rect>
+                    <rect width="13.125" height="13.125" x="33.125" y="13.680555555555555" rx="4.375" ry="4.375"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="28.75" y="28.75" rx="4.375" ry="4.375" fill="#ffff00">
+                    </rect>
+                    <rect width="13.125" height="13.125" x="28.75" y="33.125" rx="4.375" ry="4.375" fill="#ffff00">
+                    </rect>
+                    <rect width="13.125" height="13.125" x="33.125" y="28.75" rx="4.375" ry="4.375" fill="#ffff00">
+                    </rect>
+                    <rect width="13.125" height="13.125" x="33.125" y="33.125" rx="4.375" ry="4.375" fill="#ffff00">
+                    </rect>
+                    <rect width="13.125" height="13.125" x="28.75" y="48.19444444444444" rx="4.375" ry="4.375"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="28.75" y="52.56944444444444" rx="0" ry="0" fill="#ffff00">
+                    </rect>
+                    <rect width="13.125" height="13.125" x="33.125" y="48.19444444444444" rx="4.375" ry="4.375"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="33.125" y="52.56944444444444" rx="0" ry="0" fill="#ffff00">
+                    </rect>
+                    <rect width="13.125" height="13.125" x="48.19444444444444" y="9.305555555555555" rx="0" ry="0"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="48.19444444444444" y="13.680555555555555" rx="1" ry="1"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="52.56944444444444" y="9.305555555555555" rx="1" ry="1"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="52.56944444444444" y="13.680555555555555" rx="0" ry="0"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="48.19444444444444" y="28.75" rx="4.375" ry="4.375"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="48.19444444444444" y="33.125" rx="4.375" ry="4.375"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="52.56944444444444" y="28.75" rx="1" ry="1" fill="#ffff00">
+                    </rect>
+                    <rect width="13.125" height="13.125" x="52.56944444444444" y="33.125" rx="0" ry="0" fill="#ffff00">
+                    </rect>
+                    <rect width="13.125" height="13.125" x="48.19444444444444" y="48.19444444444444" rx="1" ry="1"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="48.19444444444444" y="52.56944444444444" rx="0" ry="0"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="52.56944444444444" y="48.19444444444444" rx="1" ry="1"
+                        fill="#ffff00"></rect>
+                    <rect width="13.125" height="13.125" x="52.56944444444444" y="52.56944444444444" rx="0" ry="0"
+                        fill="#ffff00"></rect>
+                    <rect width="58.33333333333333" height="8.333333333333334" x="8.333333333333334" y="0"
+                        fill="#000000"></rect>
+                    <rect width="58.33333333333333" height="8.333333333333334" x="8.333333333333334"
+                        y="66.66666666666666" fill="#000000"></rect>
+                    <rect width="8.333333333333334" height="58.33333333333333" x="0" y="8.333333333333334"
+                        fill="#000000"></rect>
+                    <rect width="8.333333333333334" height="58.33333333333333" x="66.66666666666666"
+                        y="8.333333333333334" fill="#000000"></rect>
+                    <rect width="17.5" height="6.388888888888889" x="9.305555555555555" y="0.9722222222222221" rx="1"
+                        ry="1" fill="#2040d0"></rect>
+                    <rect width="17.5" height="6.388888888888889" x="9.305555555555555" y="67.63888888888889" rx="1"
+                        ry="1" fill="#11aa00"></rect>
+                    <rect width="6.388888888888889" height="17.5" x="0.9722222222222221" y="9.305555555555555" rx="1"
+                        ry="1" fill="#d00000"></rect>
+                    <rect width="6.388888888888889" height="17.5" x="67.63888888888889" y="9.305555555555555" rx="1"
+                        ry="1" fill="#11aa00"></rect>
+                    <rect width="17.5" height="6.388888888888889" x="28.75" y="0.9722222222222221" rx="1" ry="1"
+                        fill="#11aa00"></rect>
+                    <rect width="17.5" height="6.388888888888889" x="28.75" y="67.63888888888889" rx="1" ry="1"
+                        fill="#ee8800"></rect>
+                    <rect width="6.388888888888889" height="17.5" x="0.9722222222222221" y="28.75" rx="1" ry="1"
+                        fill="#2040d0"></rect>
+                    <rect width="6.388888888888889" height="17.5" x="67.63888888888889" y="28.75" rx="1" ry="1"
+                        fill="#d00000"></rect>
+                    <rect width="17.5" height="6.388888888888889" x="48.19444444444444" y="0.9722222222222221" rx="1"
+                        ry="1" fill="#ee8800"></rect>
+                    <rect width="17.5" height="6.388888888888889" x="48.19444444444444" y="67.63888888888889" rx="1"
+                        ry="1" fill="#ee8800"></rect>
+                    <rect width="6.388888888888889" height="17.5" x="0.9722222222222221" y="48.19444444444444" rx="1"
+                        ry="1" fill="#d00000"></rect>
+                    <rect width="6.388888888888889" height="17.5" x="67.63888888888889" y="48.19444444444444" rx="1"
+                        ry="1" fill="#2040d0"></rect>
+                </svg>
+            </article>
+            <article>
+                <h1>Try the solver</h1>
+                <button id="solve">Click here</button>
+            </article>
+        </section>
+
+    </main>
+    <div style="height: 35px;"></div>
+    <footer>
+        <p>Created by Radu Antonio</p>
+        <p>contact: raduantonio_2525@yahoo.com</p>
+    </footer>
+</body>
+
+<script>
+    document.getElementById('train').addEventListener('click', function () {
+        window.location.href = './timer.html';
+    });
+    document.getElementById('learn').addEventListener('click', function () {
+        window.location.href = './learn.html';
+    });
+    document.getElementById('solve').addEventListener('click', function () {
+        window.location.href = './solver.html';
+    });
+</script>
+
+</html>

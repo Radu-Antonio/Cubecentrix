@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubecentrix</title>
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/learn.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./learn.html">LEARN</a></li>
+            <li><a href="./algorithms.html">ALGORITHMS</a></li>
+            <li><a href="./solver.html">SOLVER</a></li>
+            <li><a href="./timer.html">TIMER</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article>
+            <h1 id="notation">Cube Notation</h1>
+
+            <hr>
+            <p>Cube notation provides a standardized way to describe each move you can do on the Rubik's Cube. It is
+                used to scramble the cube, to reconstruct solves or most commonly to read algorithms.</p>
+            <h2>Basic Moves</h2>
+            <p>Each uppercase letter means to turn that side of the cube clockwise, as if you were facing it. An
+                apostrophe ' after the letter (prime) means to turn the face counterclockwise. 2 after the letter means
+                to turn the face 180°.
+            </p>
+            <hr>
+
+            <img src="./images/RUL.png" alt="cube">
+            <img src="./images/DFB.png" alt="cube">
+            <h2>Rotations</h2>
+            <p>Rotating the entire cube is displayed by the letter around which axis it rotates</p>
+            <hr>
+
+            <img id="rot" src="./images/rotations.png" alt="cube">
+        </article>
+
+        <div class="titlu">
+            <h1 id="solve">How To Solve The Rubik's Cube</h1>
+        </div>
+        <section>
+            <hr>
+            <h1>Step 1 - White Cross</h1>
+            <img src="./images/1.png" alt="cube image">
+            <hr>
+            <p>Hold the white center piece on top, and find an edge in the bottom layer that has white on it. Look at
+                the edge piece's other color, and turn the bottom layer so the edge is under the center of the same
+                color. Turn that face to bring the edge piece to the top.</p>
+            <div class="image-container">
+                <img src="./images/1-1.png" style="transform: rotate(180deg);" alt="">
+                <img src="./images/1-2.png" style="transform: rotate(180deg);" alt="">
+                <img src="./images/1-3.png" alt="">
+            </div>
+            <p>Anytime an edge piece is flipped (example below), fix it by doing the following moves: R' U F' U'</p>
+            <img src="./images/1-4.png" alt="">
+            <p>Solve all 4 of the white edge pieces to make a cross. Make sure you always look at both colors on each
+                piece so that you end up with the side colors matching as well.</p>
+        </section>
+
+        <section>
+            <hr>
+            <h1>Step 2 - First Layer</h1>
+            <img src="./images/2.png" alt="cube image">
+            <hr>
+            <p>With the cross on the bottom, find a corner piece in the top layer with white on it. Turn the top layer
+                so the surrounding centers match the colors on the corner like the image below.</p>
+            <img src="./images/2-1.png" alt="">
+            <p>Hold the cube so the corner piece is on the front/right, and repeat the <strong>right handed 4-moves (R U
+                    R' U')</strong> until this corner is solved.</p>
+            <p>Repeat until all of the first layer corners are solved. If you find a white corner incorrectly stuck in
+                the
+                bottom layer, you can bring it into the top layer by holding it on the front/right and doing the
+                <strong>right 4-moves</strong>.
+            </p>
+        </section>
+
+        <section>
+            <hr>
+            <h1>Step 3 - Second Layer</h1>
+            <img src="./images/3.png" alt="cube image">
+            <hr>
+            <p>Find an edge piece in the top layer without yellow as either of its 2 colors.
+                Turn the top so that it matches a center.
+                Face the piece and check if the top color matches the right center or left center.</p>
+            <p>If it matches the right side, do the following moves: U R U R' U' F' U' F</p>
+            <img src="./images/3-1.png" alt="">
+            <p>If it matches the left side, do the following moves: U' L' U' L U F U F'</p>
+            <img src="./images/3-2.png" alt="">
+        </section>
+
+        <section>
+            <hr>
+            <h1>Step 4 - Yellow Cross</h1>
+            <img src="./images/4.png" alt="cube image">
+            <hr>
+            <p>Hold the cube to match one of the following (ignore the corner pieces):</p>
+            <div class="image-container">
+                <img src="./images/4-1.png" alt="">
+                <img src="./images/4-2.png" alt="">
+                <img src="./images/4-3.png" alt="">
+            </div>
+            <p>Then do the following moves: F R U R' U' F'. If the cross is not solved yet, hold the cube to match the
+                new case and repeat.</p>
+        </section>
+
+        <section>
+            <hr>
+            <h1>Step 5 - Yellow Edges</h1>
+            <img src="./images/5.png" alt="cube image">
+            <hr>
+            <p>Turn the top face until 2 cross pieces match the side color (if all 4 match, you have finished this
+                step!)</p>
+            <img src="./images/5-1.png" alt="">
+            <p>Hold the 2 matching edges at the back/right. If they are across from each other, hold them in any way.
+            </p>
+            <img src="./images/5-2.png" alt="">
+            <p>Then do the following moves: R U R' U R U2 R'. Turn the top to match all 4 colors. If you can only match
+                2 colors, then repeat this step.</p>
+        </section>
+
+        <section>
+            <hr>
+            <h1>Step 6 - Yellow Corners</h1>
+            <img src="./images/6.png" alt="cube image">
+            <hr>
+            <p>A corner is in the correct position if all 3 colors on the piece match the surrounding colors.
+                Examples of corner pieces in the correct position:</p>
+            <div class="image-container">
+                <img src="./images/6-1.png" alt="">
+                <img src="./images/6-2.png" alt="">
+            </div>
+            <p>If 1 corner is correct, hold it in the front/right (if 0 are correct, hold any corner in the
+                front/right).
+                Then do the following moves: U R U' L' U R' U' L</p>
+        </section>
+
+        <section>
+            <hr>
+            <h1>Step 7 - Finish Cube</h1>
+            <img src="./images/7.png" alt="cube image">
+            <hr>
+            <p>Turn the cube over so that the unsolved corners are all in the bottom layer.
+                You may have 2, 3, or 4 unsolved corner pieces.</p>
+            <img src="./images/7-1.png" alt="" style="transform: rotate(180deg);">
+            <p>Repeatedly do the 4-move sequence (R U R' U') until the front/right corner is solved (has yellow on the
+                bottom). Then turn the bottom layer (not the whole cube) to bring an unsolved corner to the front/right.
+                Repeat
+                until the whole cube is solved.</p>
+        </section>
+
+        <div class="titlu">
+            <h1>Congrats on solving the Rubik's Cube!</h1>
+        </div>
+    </main>
+
+    <footer>
+        <p>Created by Radu Antonio</p>
+        <p>contact: raduantonio_2525@yahoo.com</p>
+    </footer>
+</body>
+
+</html>
