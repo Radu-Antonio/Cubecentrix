@@ -19,32 +19,32 @@ article {
 }
 
 article h1 {
-    font-size: 2.5em; 
+    font-size: 2.5em;
     text-align: center;
-    margin: 30px 0; 
+    margin: 30px 0;
 }
 
 article h2 {
-    font-size: 2em; 
+    font-size: 2em;
     text-align: center;
-    margin: 20px 0; 
+    margin: 20px 0;
 }
 
 article p {
-    font-size: 1.2em; 
+    font-size: 1.2em;
     text-align: center;
-    margin: 20px 0; 
+    margin: 20px 0;
 }
 
 article img {
     display: block;
-    max-width: 40vw; 
+    max-width: 40vw;
     height: auto;
-    margin: 30px auto; 
+    margin: 30px auto;
 }
 
 article #rot {
-    max-width: 50vw; 
+    max-width: 50vw;
 }
 
 section {
@@ -55,12 +55,12 @@ section {
 section h1 {
     font-size: 2em;
     margin-bottom: 20px;
-    display: inline-block; 
+    display: inline-block;
     vertical-align: middle;
 }
 
-section h1 + img {
-    width: 8%; 
+section h1+img {
+    width: 8%;
     margin-left: 20px;
     vertical-align: middle;
     display: inline-block;
@@ -70,7 +70,7 @@ section p {
     margin: 20px auto;
     line-height: 1.6;
     font-size: 1.2em;
-    max-width: 700px;
+    max-width: 750px;
     text-align: center;
     color: #333;
 }
@@ -83,7 +83,7 @@ section hr {
 }
 
 section img {
-    width: 15%; /* Adjust the size of all images relatively */
+    width: 15%;
     height: auto;
     display: block;
     margin: 10px auto;
@@ -98,6 +98,6 @@ section img {
 
 .image-container img {
     margin: 20px;
-    width: 15%; /* Adjusts image size relative to container */
+    width: 15%;
     height: auto;
 }
