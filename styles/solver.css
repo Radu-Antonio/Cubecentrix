@@ -1,0 +1,92 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        ". top . ."
+        "left front right back"
+        ". bottom . .";
+    gap: 10px;
+}
+
+.face {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(3, 50px);
+    gap: 5px;
+}
+
+.face div {
+    background-color: white;
+    border: 1px solid #bababa;
+    cursor: pointer;
+}
+
+#top-face {
+    grid-area: top;
+}
+
+#left-face {
+    grid-area: left;
+}
+
+#front-face {
+    grid-area: front;
+}
+
+#right-face {
+    grid-area: right;
+}
+
+#bottom-face {
+    grid-area: bottom;
+}
+
+#back-face {
+    grid-area: back;
+}
+
+.color-selector {
+    display: flex;
+    margin-top: 20px;
+}
+
+.color {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border: 2px solid #333;
+    cursor: pointer;
+}
+
+/* Add these styles to the end of your CSS file */
+
+#solve-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #e98a0d;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#solve-button:hover {
+    background-color: #ee9522;
+}
+
+#solution-output {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
