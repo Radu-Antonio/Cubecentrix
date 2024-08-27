@@ -1,16 +1,23 @@
 #time-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    margin: 0;
-    background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+  margin: 0;
 }
+
 #timer {
-    font-size: 48px;
-    font-weight: bold;
-    color: black;
+  font-size: 52px;
+  font-weight: bold;
+  color: black;
 }
+
+#sc-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .ready {
-    color: green;
+  color: rgb(7, 230, 7);
 }
