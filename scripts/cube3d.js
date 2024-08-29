@@ -152,15 +152,11 @@ var s2 = function (sketch) {
     }
   }
 
-  const size = 50;
+  const size = 65;
   const dim = 3;
   let cubes = [];
-
-  /* AUTO ANIMATION - RANDOM */
-  const moves = ["f", "F", "b", "B", "r", "R", "l", "L", "u", "U", "d", "D"];
   let listMoves = [];
-  let autoanimation = true;
-  let backwardMoves = false;
+  let autoanimation = false;
 
   let colors = [
     [0, 200, 0],
@@ -223,6 +219,7 @@ var s2 = function (sketch) {
   ];
 
   let animating = false;
+  let animationSpeed = 0.08;
   let angle = 0;
   let clockwise = 1;
   let position;
@@ -230,10 +227,47 @@ var s2 = function (sketch) {
   let index;
 
   sketch.setup = function () {
+    document.getElementById("solve-button").addEventListener("click", () => {
+      window.scrollBy(0, 1500);
+      window.scrollBy(0, -100);
+      setTimeout(() => {
+        let solution = document.getElementById("solution-output").innerHTML;
+        listMoves = solution
+          .split(":")[1]
+          .trim()
+          .split(" ")
+          .map((m) => {
+            if (m.includes("2")) return m[0] + " " + m[0];
+            return m;
+          })
+          .join(" ")
+          .split(" ");
+
+        let reverseMoveList = listMoves
+          .slice()
+          .reverse()
+          .map((m) => {
+            if (m.includes("'")) return m[0];
+            return m + "'";
+          });
+
+        for (let move of reverseMoveList) {
+          play(move);
+          animating = false;
+          updateRubiksCubeColors();
+        }
+
+        setTimeout(() => {
+          autoanimation = true;
+        }, 900);
+      }, 400);
+    });
+
     sketch.pixelDensity(1);
     let cnvs = sketch.createCanvas(600, 600, sketch.WEBGL);
     cnvs.parent("container-cube");
     sketch.setAttributes("antialias", true);
+
     index = 0;
     cubes = [];
 
@@ -255,32 +289,23 @@ var s2 = function (sketch) {
     sketch.background(64);
     sketch.orbitControl();
 
+    sketch.rotateX(-sketch.PI / 8);
+    sketch.rotateY(sketch.PI / 6);
+
     if (animating) {
-      if (autoanimation) {
-        angle = angle += 0.12;
-      } else {
-        angle = angle += 0.15;
-      }
+      angle += animationSpeed;
       if (angle >= sketch.HALF_PI) {
         angle = sketch.HALF_PI;
         animating = false;
         updateRubiksCubeColors();
       }
     } else {
-      /* AUTO ANIMATION - RANDOM */
       if (autoanimation) {
-        if (listMoves.length < 30 && !backwardMoves) {
-          let mKey = moves[Math.floor(Math.random() * moves.length)];
-          play(mKey);
-          listMoves.push(mKey);
+        if (listMoves.length) {
+          play(listMoves[0]);
+          listMoves.shift();
         } else {
-          backwardMoves = true;
-          if (listMoves.length > 0) {
-            play(flipMove(listMoves.pop()));
-          } else {
-            backwardMoves = false;
-            autoanimation = false;
-          }
+          autoanimation = false;
         }
       }
     }
@@ -304,83 +329,77 @@ var s2 = function (sketch) {
     });
   };
 
-  function keyPressed() {
-    if (!autoanimation) {
-      play(key);
-    }
-  }
-
   function play(key) {
     if (!animating) {
       angle = 0;
       switch (key) {
-        case "f":
+        case "F":
           clockwise = 1;
           position = 1;
           rotateType = "z";
           animating = true;
           break;
-        case "F":
+        case "F'":
           clockwise = -1;
           position = 1;
-          rotateType = "z";
-          animating = true;
-          break;
-        case "b":
-          clockwise = -1;
-          position = -1;
           rotateType = "z";
           animating = true;
           break;
         case "B":
+          clockwise = -1;
+          position = -1;
+          rotateType = "z";
+          animating = true;
+          break;
+        case "B'":
           clockwise = 1;
           position = -1;
           rotateType = "z";
           animating = true;
           break;
-        case "r":
+        case "R":
           clockwise = 1;
           position = 1;
           rotateType = "x";
           animating = true;
           break;
-        case "R":
+        case "R'":
           clockwise = -1;
           position = 1;
-          rotateType = "x";
-          animating = true;
-          break;
-        case "l":
-          clockwise = -1;
-          position = -1;
           rotateType = "x";
           animating = true;
           break;
         case "L":
+          clockwise = -1;
+          position = -1;
+          rotateType = "x";
+          animating = true;
+          break;
+        case "L'":
           clockwise = 1;
           position = -1;
           rotateType = "x";
           animating = true;
           break;
-        case "u":
+        case "U":
           clockwise = -1;
           position = -1;
           rotateType = "y";
           animating = true;
           break;
-        case "U":
+        case "U'":
           clockwise = 1;
           position = -1;
           rotateType = "y";
           animating = true;
           break;
-        case "d":
+        case "D":
           clockwise = 1;
           position = 1;
           rotateType = "y";
           animating = true;
           break;
-        case "D":
+        case "D'":
           clockwise = -1;
           position = 1;
           rotateType = "y";
@@ -390,13 +409,6 @@ var s2 = function (sketch) {
           break;
       }
     }
-  }
-
-  function flipMove(mKey) {
-    if (mKey.toLowerCase() == mKey) {
-      return mKey.toUpperCase();
-    }
-    return mKey.toLowerCase();
   }
 
   function updateRubiksCubeColors() {
