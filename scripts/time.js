@@ -67,15 +67,6 @@ function stopTimer() {
     generateScramble(20).join(" ");
 }
 
-function resetTimer() {
-  clearInterval(timerInterval);
-  timerElement.textContent = "00:00.00";
-  startTime = null;
-  isRunning = false;
-  readyToStart = false;
-  timerElement.style.color = "black";
-}
-
 function updateTimer(elapsedTime) {
   let totalSeconds = (elapsedTime / 1000).toFixed(3);
   let minutes = Math.floor(totalSeconds / 60)

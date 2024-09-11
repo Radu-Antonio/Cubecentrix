@@ -219,7 +219,7 @@ var s2 = function (sketch) {
   ];
 
   let animating = false;
-  let animationSpeed = 0.08;
+  let animationSpeed = 0.06;
   let angle = 0;
   let clockwise = 1;
   let position;
